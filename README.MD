@@ -4,7 +4,7 @@
     - 参考
         - [ServiceStack Documentation](https://docs.servicestack.net/)
         - [C# Jupyter Notebooks (servicestack.net)](https://docs.servicestack.net/jupyter-notebooks-csharp#generate-c-jupyter-notebooks)
-    - 查看内核列表： `jupyter kernelspec **list**`
+    - 查看内核列表： `jupyter kernelspec list`
     - 安装C#内核：
         - `dotnet tool install -g Microsoft.dotnet-interactive`
         - `dotnet interactive jupyter install`
@@ -17,6 +17,11 @@
         - `npm install -g tslab`
         - `tslab install --version`
         - `tslab install [--python=python3]`
+    - 安装C++内核
+        - 参考：[https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92](https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92)
+    - 安装Go内核
+    - 安装Rust内核
+    - 安装Julia内核
 - Jupyter创建知识库
     - 安装Jupyter Book：`pip install jupyter-book`
     - 安装ghp-import： `pip install ghp-import`
@@ -27,6 +32,7 @@
           execute_notebooks: off
         ```
 - 使用
-    - `open`： 打开notebook
+    - `open-note`： 打开jupyter notebook
+    - `open-lab`： 打开jupyter lab
     - `build <directory name>`: 构建book,生成文档复制到dist目录
     - `publish`: 发布到Github仓库的gh-pages分支，可以通过<user name>.github.io/<repo name>/<book name>访问
