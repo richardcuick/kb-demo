@@ -3,6 +3,8 @@
 - 安装Anaconda: [https://www.anaconda.com/download](https://www.anaconda.com/
 download)
     - 使用Anaconda Prompt(Anaconda提示行，已安装Python环境)
+- 创建Jupter Book
+    - `jupyter-book create <book name>/`
 - Jupyter内核
     - 参考
         - [ServiceStack Documentation](https://docs.servicestack.net/)
