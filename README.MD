@@ -1,5 +1,8 @@
 # Jupyter内核安装及知识库创建
 
+- 安装Anaconda: [https://www.anaconda.com/download](https://www.anaconda.com/
+download)
+    - 使用Anaconda Prompt(Anaconda提示行，已安装Python环境)
 - Jupyter内核
     - 参考
         - [ServiceStack Documentation](https://docs.servicestack.net/)
@@ -19,6 +22,7 @@
         - `tslab install [--python=python3]`
     - 安装C++内核
         - 参考：[https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92](https://blog.jupyter.org/interactive-workflows-for-c-with-jupyter-fe9b54227d92)
+        - `install -c conda-forge xeus-cling`
     - 安装Go内核
     - 安装Rust内核
     - 安装Julia内核
