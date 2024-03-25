@@ -1,5 +1,35 @@
 # Jupyter内核安装及知识库创建
 
+知识库
+
+下面的库和文档演示了：
+
+- 通过Jupyter Book创建知识库
+- 通过Jupyter Notebook或Jupyter Lab创建和修改记事本
+- 让Jupyter记事本支持C#、Matlab、TypeScript、JavaScript等语言内核
+
+使用Jupyter记事本创建知识库的收益包括：
+
+- 通过记事本演示算法、模型
+- 通过数据列表和数据可视化的方式跟客户讨论及验证算法和模型
+- 沉淀、记录和升级知识储备
+- 帮助团队成员之间、成员和客户之间的沟通、学习和交流
+
+参考：
+
+- Github Repo: https://github.com/richardcuick/kb-demo
+- 安装文档：https://github.com/richardcuick/kb-demo/blob/main/README.MD
+- 演示：https://richardcuick.github.io/kb-demo/book1/csharp-sample.html
+
+建议：
+
+- 大家为手中开发的程序和软件创建知识库
+- 积极使用，遇到问题及时沟通解决，帮助团队、实验室迅速建立知识库
+- 知识库是帮团队沉淀业务知识最好的手段，后期可以起到减少知识负载加速开发的目的。
+
+---
+安装步骤
+
 - 安装Anaconda: [https://www.anaconda.com/download](https://www.anaconda.com/
 download)
     - 使用Anaconda Prompt(Anaconda提示行，已安装Python环境)
