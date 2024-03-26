@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Matlab示例 &#8212; My sample book</title>
+    <title>LaTex OCR &#8212; My sample book</title>
   
   
   
@@ -57,13 +57,11 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'matlab-sample';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'latex-ocr';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="LaTex OCR" href="latex-ocr.html" />
-    <link rel="prev" title="C#示例" href="csharp-sample.html" />
+    <link rel="next" title="AngouriMath Sample" href="angourimath-sample.html" />
+    <link rel="prev" title="Matlab示例" href="matlab-sample.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -183,8 +181,8 @@
 <li class="toctree-l1"><a class="reference internal" href="notebooks.html">Content with notebooks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="markdown-notebooks.html">Notebooks with MyST Markdown</a></li>
 <li class="toctree-l1"><a class="reference internal" href="csharp-sample.html">C#示例</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Matlab示例</a></li>
-<li class="toctree-l1"><a class="reference internal" href="latex-ocr.html">LaTex OCR</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matlab-sample.html">Matlab示例</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">LaTex OCR</a></li>
 <li class="toctree-l1"><a class="reference internal" href="angourimath-sample.html">AngouriMath Sample</a></li>
 </ul>
 
@@ -257,7 +255,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmatlab-sample.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Flatex-ocr.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +285,7 @@
       
       
       
-      <li><a href="_sources/matlab-sample.ipynb" target="_blank"
+      <li><a href="_sources/latex-ocr.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -369,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Matlab示例</h1>
+    <h1>LaTex OCR</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -383,234 +381,137 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="matlab">
-<h1>Matlab示例<a class="headerlink" href="#matlab" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="latex-ocr">
+<h1>LaTex OCR<a class="headerlink" href="#latex-ocr" title="Link to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Website: <a class="reference external" href="https://lukas-blecher.github.io/LaTeX-OCR/">https://lukas-blecher.github.io/LaTeX-OCR/</a></p></li>
+<li><p>Github Repo: <a class="github reference external" href="https://github.com/lukas-blecher/LaTeX-OCR">lukas-blecher/LaTeX-OCR</a></p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">loose</span>
-<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span>
-<span class="w">    </span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span>
-<span class="k">end</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;pix2tex[gui]&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">pix2tex.cli</span> <span class="kn">import</span> <span class="n">LatexOCR</span>
+
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;LaTex_OCR_Input_Image.png&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">LatexOCR</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">model</span><span class="p">(</span><span class="n">img</span><span class="p">))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><html><body><pre>ans = 2</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 3</pre></body></html></div></div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>S=\int_{x}\left\{\frac{1}{2}\sum_{a}\partial^{\mu}\chi_{a}\partial_{\mu}\chi_{a}+V(\rho)\right\},\right\}
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">format</span><span class="w"> </span><span class="n">compact</span>
-<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="p">=</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span>
-<span class="w">    </span><span class="nb">i</span><span class="o">+</span><span class="mi">1</span>
-<span class="k">end</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="n">filename</span><span class="o">=</span><span class="s1">&#39;LaTex_OCR_Input_Image.png&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><html><body><pre>ans = 2</pre></body></html></div><div class="output text_html"><html><body><pre>ans = 3</pre></body></html></div></div>
+<img alt="_images/3c0a4426b574f582833e4b436f93a265ae895517a3fce2db70fdbf813ccd0e6c.png" src="_images/3c0a4426b574f582833e4b436f93a265ae895517a3fce2db70fdbf813ccd0e6c.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">help</span><span class="w"> </span><span class="nb">sin</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>latex2sympy2
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> sin - 参数的正弦，以弧度为单位
-    此 MATLAB 函数 返回 X 的元素的正弦。sin 函数按元素处理数组。该函数同时接受实数和复数
-    输入。 对于 X 的实数值，sin(X) 返回区间 [-1, 1] 内的实数值。 对于 X 的复数
-    值，sin(X) 返回复数值。
-
-    语法
-      Y = sin(X)
-
-    输入参数
-      X - 输入角（以弧度为单位）
-        标量 | 向量 | 矩阵 | 多维数组 | 表 | 时间表
-
-    输出参数
-      Y - 输入角正弦
-        标量 | 向量 | 矩阵 | 多维数组 | 表 | 时间表
-
-    示例
-      openExample(&#39;matlab/PlotSineFunctionExample&#39;)
-      openExample(&#39;matlab/SineOfVectorOfComplexAnglesExample&#39;)
-
-    另请参阅 sind, asin, asind, sinh, sinpi
-
-    已在 R2006a 之前的 MATLAB 中引入
-    sin 的文档
-       doc sin
-
-    sin 的其他用法
-
-       codistributed/sin    fixedpoint/sin    sym/sin         tabular/sin
-       dlarray/sin          gpuArray/sin      symbolic/sin
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: latex2sympy2 in c:\users\richa\anaconda3\lib\site-packages (1.9.1)
+Requirement already satisfied: sympy&gt;=1.4 in c:\users\richa\anaconda3\lib\site-packages (from latex2sympy2) (1.11.1)
+Requirement already satisfied: antlr4-python3-runtime==4.7.2 in c:\users\richa\anaconda3\lib\site-packages (from latex2sympy2) (4.7.2)
+Requirement already satisfied: mpmath&gt;=0.19 in c:\users\richa\anaconda3\lib\site-packages (from sympy&gt;=1.4-&gt;latex2sympy2) (1.3.0)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>?<span class="nb">sin</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">latex2sympy2</span> <span class="kn">import</span> <span class="n">latex2sympy</span><span class="p">,</span> <span class="n">latex2latex</span>
+
+<span class="n">tex</span> <span class="o">=</span> <span class="sa">r</span><span class="s2">&quot;\frac</span><span class="si">{d}{dx}</span><span class="s2">(x^</span><span class="si">{2}</span><span class="s2">+x)&quot;</span>
+<span class="c1"># Or you can use &#39;\mathrm{d}&#39; to replace &#39;d&#39;</span>
+<span class="n">latex2sympy</span><span class="p">(</span><span class="n">tex</span><span class="p">)</span>
+<span class="c1"># =&gt; &quot;Derivative(x**2 + x, x)&quot;</span>
+<span class="n">latex2latex</span><span class="p">(</span><span class="n">tex</span><span class="p">)</span>
+<span class="c1"># =&gt; &quot;2 x + 1&quot;</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ans = 
-  0x0 Class 数组 - 属性:
-
-    Name
-    Description
-    DetailedDescription
-    Hidden
-    Sealed
-    Abstract
-    Enumeration
-    ConstructOnLoad
-    HandleCompatible
-    InferiorClasses
-    Namespace
-    Aliases
-    RestrictsSubclassing
-    PropertyList
-    MethodList
-    EventList
-    EnumerationMemberList
-    SuperclassList
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;2 x + 1&#39;
 </pre></div>
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">doc</span><span class="w"> </span><span class="nb">sin</span>
+<p>Use ChatGPT to convert Latex to C# source code with prompt: convert the following latex expression to C# function:
+S=\int_{x}\left{\frac{1}{2}\sum_{a}\partial^{\mu}\chi_{a}\partial_{\mu}\chi_{a}+V(\rho)\right},\right}</p>
+<p>To convert the given LaTeX expression into a C# function, we first need to understand what the LaTeX expression represents. This expression describes an action ( S ) in terms of an integral over a function of ( \chi_a ) and ( V(\rho) ), where ( \chi_a ) seems to be a field that depends on space or spacetime coordinates, and ( V(\rho) ) is some potential that also depends on another variable ( \rho ).</p>
+<p>The LaTeX expression:
+[ S=\int_{x}\left{\frac{1}{2}\sum_{a}\partial^{\mu}\chi_{a}\partial_{\mu}\chi_{a}+V(\rho)\right} ]</p>
+<p>This expression involves:</p>
+<ul class="simple">
+<li><p>An integral over space or spacetime coordinates ( x ).</p></li>
+<li><p>A sum over ( a ), which might index different components or fields ( \chi_a ).</p></li>
+<li><p>A derivative ( \partial^\mu ) indicating a partial derivative with respect to the spacetime coordinates, suggesting this might be a field theory expression from physics.</p></li>
+<li><p>A potential ( V(\rho) ), the form of which is unspecified.</p></li>
+</ul>
+<p>To convert this into a C# function, we have to make several assumptions due to the abstract nature of the expression:</p>
+<ul class="simple">
+<li><p>We assume ( \chi_a ) and ( V(\rho) ) can be represented by functions or methods in C#.</p></li>
+<li><p>We assume discrete spacetime or spatial coordinates since we cannot directly translate continuous mathematical integrals and derivatives into code without numerical methods.</p></li>
+<li><p>We need to define the domain of integration and the method of numerical integration.</p></li>
+</ul>
+<p>Given these considerations, a C# implementation might focus on the numerical computation of the integral, possibly using a simple method like the trapezoidal rule, and finite differences for derivatives. Without specific forms for ( \chi_a ) and ( V(\rho) ), the function might look something like this in a very generalized form:</p>
+<div class="highlight-csharp notranslate"><div class="highlight"><pre><span></span><span class="kt">double</span><span class="w"> </span><span class="nf">ComputeAction</span><span class="p">(</span><span class="kt">double</span><span class="p">[]</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="n">Func</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="p">[]</span><span class="w"> </span><span class="n">chi</span><span class="p">,</span><span class="w"> </span><span class="n">Func</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">&gt;</span><span class="w"> </span><span class="n">V</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="p">[]</span><span class="w"> </span><span class="n">rho</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c1">// Assuming x is discretized spacetime coordinates</span>
+<span class="w">    </span><span class="c1">// and chi is an array of functions representing different chi_a</span>
+<span class="w">    </span><span class="c1">// Assuming a simple numerical derivative and midpoint rule for integration</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">N</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="c1">// Simple numerical integration loop</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">dx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">];</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">midPoint</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">])</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">sumChi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span><span class="p">;</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">chiFunc</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">chi</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// Simple finite difference for derivative, assuming uniform spacing</span>
+<span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">derivative</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">chiFunc</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">chiFunc</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">1</span><span class="p">]))</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span>
+<span class="w">            </span><span class="n">sumChi</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">derivative</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">derivative</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="p">(</span><span class="n">sumChi</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="n">rho</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dx</span><span class="p">;</span><span class="w"> </span><span class="c1">// Assuming rho is somehow related to x or chi, needs specification</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sum</span><span class="p">;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">tx</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">linspace</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">41</span><span class="p">);</span>
-<span class="n">ty</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">tx</span><span class="p">;</span>
-<span class="p">[</span><span class="n">xx</span><span class="p">,</span><span class="w"> </span><span class="n">yy</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">meshgrid</span><span class="w"> </span><span class="p">(</span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">ty</span><span class="p">);</span>
-<span class="n">r</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sqrt</span><span class="w"> </span><span class="p">(</span><span class="n">xx</span><span class="w"> </span><span class="o">.^</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">yy</span><span class="w"> </span><span class="o">.^</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">eps</span><span class="p">;</span>
-<span class="n">tz</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">sin</span><span class="w"> </span><span class="p">(</span><span class="n">r</span><span class="p">)</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="n">r</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot inline</span>
-<span class="nb">mesh</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">ty</span><span class="p">,</span><span class="w"> </span><span class="n">tz</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/cb7938ebd7d8b1afee6c71002cffcc64afda841ceac4d35d29e62d5af9f0f868.png" src="_images/cb7938ebd7d8b1afee6c71002cffcc64afda841ceac4d35d29e62d5af9f0f868.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%plot native</span>
-<span class="nb">mesh</span><span class="p">(</span><span class="n">tx</span><span class="p">,</span><span class="w"> </span><span class="n">ty</span><span class="p">,</span><span class="w"> </span><span class="n">tz</span><span class="p">);</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/60b5673143f036df176e7ca133b27233fb1538623197807a75f416ed183fbfd5.png" src="_images/60b5673143f036df176e7ca133b27233fb1538623197807a75f416ed183fbfd5.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">close</span><span class="w"> </span><span class="nb">all</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span>?<span class="c">%plot</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>该语句不完整。
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">f</span><span class="p">=@(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="n">x</span>^<span class="mi">3</span><span class="o">+</span><span class="n">x</span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="nb">fzero</span><span class="p">(</span><span class="n">f</span><span class="p">,[</span><span class="mi">0</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="nb">optimset</span><span class="p">(</span><span class="s">&#39;Display&#39;</span><span class="p">,</span><span class="s">&#39;iter&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 
- Func-count    x          f(x)             Procedure
-    2               1             1        initial
-    3             0.5        -0.375        bisection
-    4        0.636364     -0.105935        interpolation
-    5         0.68491    0.00620153        interpolation
-    6        0.682225  -0.000246683        interpolation
-    7        0.682328  -5.43508e-07        interpolation
-    8        0.682328   1.50102e-13        interpolation
-    9        0.682328             0        interpolation
- 
-在区间 [0, 1] 中发现零
-</pre></div>
-</div>
-<div class="output text_html"><html><body><pre>ans = 0.6823</pre></body></html></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="k">function</span><span class="w"> </span>p<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">multi_line_func</span><span class="p">(</span>a,b<span class="p">)</span>
-<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="c">%%file multi_line_func.m</span>
-
-<span class="k">function</span><span class="w"> </span>p<span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nf">multi_line_func</span><span class="p">(</span>a,b<span class="p">)</span>
-<span class="w">    </span><span class="c">% in-file comments can be added like this</span>
-<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">b</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="n">p</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span>
-<span class="k">end</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-matlab notranslate"><div class="highlight"><pre><span></span><span class="n">multi_line_func</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>函数或变量 &#39;multi_line_func&#39; 无法识别。
-</pre></div>
-</div>
-</div>
-</div>
-<p><span class="math notranslate nohighlight">\(e^{i\pi} + 1 = 0\)</span></p>
-<div class="math notranslate nohighlight">
-\[e^x=\sum_{i=0}^\infty \frac{1}{i!}x^i\]</div>
+<p>This function is highly speculative and assumes:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x</span></code> is an array representing discretized spacetime or spatial coordinates.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">chi</span></code> is an array of functions, each corresponding to ( \chi_a(x) ).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">V</span></code> is a function representing the potential ( V(\rho) ).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rho</span></code> is an array with values that <code class="docutils literal notranslate"><span class="pre">V</span></code> depends on, which must be related to <code class="docutils literal notranslate"><span class="pre">x</span></code> or the fields ( \chi_a ) somehow.</p></li>
+</ul>
+<p>Actual implementation would require more specific details about the physical system being modeled, the form of ( \chi_a ) and ( V(\rho) ), and how ( \rho ) is related to the other quantities.</p>
 </section>
 
     <script type="text/x-thebe-config">
@@ -622,16 +523,16 @@ document.write(`
         },
         codeMirrorConfig: {
             theme: "abcdef",
-            mode: "jupyter_matlab_kernel"
+            mode: "python"
         },
         kernelOptions: {
-            name: "jupyter_matlab_kernel",
+            name: "python3",
             path: "./."
         },
         predefinedOutput: true
     }
     </script>
-    <script>kernelName = 'jupyter_matlab_kernel'</script>
+    <script>kernelName = 'python3'</script>
 
                 </article>
               
@@ -644,20 +545,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="csharp-sample.html"
+       href="matlab-sample.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">C#示例</p>
+        <p class="prev-next-title">Matlab示例</p>
       </div>
     </a>
     <a class="right-next"
-       href="latex-ocr.html"
+       href="angourimath-sample.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">LaTex OCR</p>
+        <p class="prev-next-title">AngouriMath Sample</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
