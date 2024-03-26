@@ -10,3 +10,7 @@ chapters:
 - file: csharp-sample
 - file: matlab-sample
 - file: latex-ocr
+- file: angourimath-sample
+- file: hthp/高温高压钻井液性质预测模型
+- file: hthp/密度组分模型
+- file: hthp/盐水密度组分模型
